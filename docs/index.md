@@ -1,5 +1,6 @@
 Day 3 (7 sept):
 ===============
+# JULIE EDITING INDEX.MD ONLINE VIA GITHUB
 
 objective :  Introduction to a servo motor and how to control it with a potentiometer. 
 
