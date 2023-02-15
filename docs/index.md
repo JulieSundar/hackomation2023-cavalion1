@@ -1,21 +1,52 @@
-# Welcome to MkDocs
+Day 3 (7 sept):
+===============
 
-This is a test site hosted on [GitLab Pages](https://pages.gitlab.io). You can
-[browse its source code](https://gitlab.com/pages/mkdocs), fork it and start
-using it on your projects.
+objective :  Introduction to a servo motor and how to control it with a potentiometer. 
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+Introduction to a DC motor. 
 
-## Commands
+Component list:  Servo motor
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+Potentiometer 
 
-## Project layout
+Arduino
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Breadboard 
+
+DC motor
+
+L293D
+
+HandsOn:
+
+First we built a servo motor and coded it to turn 0, 90 and 180 degrees and we could also see the change on the display. 
+
+![](https://lh5.googleusercontent.com/P5hEVp-YlWhw0K-Spb3UuLfHk2DKJfIcaP-7-UaPqY7jGGerHwt9JDV6pD5_4PHCHxnLBVLZRvjC4GQt2MaALJTks37CZs9qOrpReY-b1b5QkkzCR0xpXNhicQq4gwkQXNk0zn4o8pxpFOb5l7fP6zM)
+
+After that we tried to control the servo motor with a potentiometer.
+
+![](https://lh6.googleusercontent.com/qa__57ulGhCjveuhp_ZtFsJWT8OC5sxG-I21wGFasWiyIQr89_DYRCyTpEdfzW7H-bJG9tQu4pOJPXBZVjnlwxFQtmMIQ45jCZoMNrFEENUIJiRdo7o_50_xmVAltBqSboKeeb8NCKZYhdU09yygbpg)
+
+After this we learned about a DC motor and how to control it with a L293D. And the challenge was to work with 2 DC motors. 
+
+![](https://lh6.googleusercontent.com/6f-Jgn_0yL_pDspsd8OWmwFqSDbQQnfOnq6m5D6ZJibk0Hx_OAFnIFOfVxqrXRNNI0rZjq0wgAuXJD-BBHPaJLCHDSjBXbjV5MBdrQzJdZhfPiImU3eucP0aZd_ylepL9DsOkf95HG6fQLdb1JXyocA)
+
+Code:
+
+For the servometer:
+
+#include <Servo.h>
+
+Servo myservo;
+
+int servoPin = 3;
+
+void setup()
+
+{
+
+  myservo.attach(servoPin);
+
+  Serial.begin(9600);
+
+}
